@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Button from "./Button";
 
-const url = "https://dummyjson.com/products";
+const url = "https://dummyjson.com/products?limit=20";
 
 const Api = () => {
   const [products, setProducts] = useState([]);
@@ -32,8 +32,8 @@ const Api = () => {
   }
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
-      <h2 className="text-3xl font-bold mb-6 text-center text-blue-700">MiniShop Products</h2>
+    <div className="p-6 bg-gradient-to-r from-blue-500 to-green-500  min-h-screen">
+      <h2 className="text-3xl font-bold mb-6 text-center text-white">MiniShop Products</h2>
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {products.map((product) => (
           <div
