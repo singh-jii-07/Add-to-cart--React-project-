@@ -3,11 +3,16 @@ import React, { createContext, useState } from "react";
 export const AddContext = createContext();
 
 const AddcontextProvider = ({ children }) => {
-  const [add, setAdd] = useState(false);
+  const [add, setAdd] = useState([]);  
+
+  const addToCart = (product) => {
+    setAdd((prevAdd) => [...prevAdd, product]); 
+  };
 
   const requiredVal = {
-    add,
-    setAdd,
+    add,       
+    setAdd,    
+    addToCart,  
   };
 
   return (

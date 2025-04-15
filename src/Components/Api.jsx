@@ -52,7 +52,8 @@ const Api = () => {
               <p className="text-gray-700 font-medium mb-4">
                 Price: <span className="text-green-600 font-bold">${product.price}</span>
               </p>
-              <Button/>
+              <Button product={product} />
+
             </div>
           </div>
         ))}
