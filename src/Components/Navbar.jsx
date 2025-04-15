@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   const cardData = [
@@ -16,8 +17,10 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-md p-4 flex justify-around items-center">
-      <div className="text-2xl font-bold text-blue-600">MiniShop</div>
+    <nav className="bg-white relative shadow-xl p-4 flex justify-around items-center">
+      <div className="text-2xl font-bold text-blue-600 cursor-pointer">
+        MiniShop
+      </div>
       <ul className="flex space-x-4">
         {cardData.map((card) => (
           <li key={card.id}>
@@ -30,6 +33,8 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+
+      <FaBars />
     </nav>
   );
 };

@@ -6,7 +6,7 @@ const AddcontextProvider = ({ children }) => {
   const [add, setAdd] = useState([]);  
 
   const addToCart = (product) => {
-    setAdd((prevAdd) => [...prevAdd, product]); 
+    setAdd(() => [...add, product]); 
   };
 
   const requiredVal = {

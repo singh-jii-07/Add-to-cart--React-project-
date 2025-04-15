@@ -32,19 +32,19 @@ const Api = () => {
   }
 
   return (
-    <div className="p-6 bg-gradient-to-r from-blue-500 to-green-500  min-h-screen">
+    <div className="p-6 bg-gradient-to-r from-blue-500 to-green-500 min-h-screen">
       <h2 className="text-3xl font-bold mb-6 text-center text-white">MiniShop Products</h2>
-      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid gap-6 grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
         {products.map((product) => (
           <div
             key={product.id}
-            className="bg-white rounded-xl shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 overflow-hidden"
+            className="bg-white rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 overflow-hidden"
           >
             <div className="overflow-hidden">
               <img
                 src={product.thumbnail}
                 alt={product.title}
-                className="h-48 w-full object-cover rounded-t-xl hover:scale-110 transition-transform duration-500"
+                className="h-48 w-screen object-cover rounded-t-xl hover:scale-110 transition-transform duration-500 bg-slate-200 "
               />
             </div>
             <div className="p-4 flex flex-col justify-between">

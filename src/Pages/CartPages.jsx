@@ -11,7 +11,7 @@ const CartPages = () => {
       </h2>
 
       {add.length === 0 ? (
-        <p className="text-white text-lg text-center">No items in cart</p>
+        <p className="text-white font-bold text-center text-9xl ">No items in cart</p>
       ) : (
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {add.map((item, index) => (
