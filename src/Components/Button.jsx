@@ -7,6 +7,7 @@ const Button = ({ product }) => {
 
   const handleAddToCart = () => {
     toast.success("Item Added to Cart!");  
+    // console.log(product);
     addToCart(product);  
   };
 
