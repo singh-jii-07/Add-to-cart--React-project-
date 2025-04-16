@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { AddContext } from './Context/AddContext';  
-import { toast } from 'react-toastify';
 
-const Button = ({ product }) => {
+
+const Button = ({ product,label }) => {
   const { addToCart } = useContext(AddContext);  
 
   const handleAddToCart = () => {
-    toast.success("Item Added to Cart!");  
+   
     // console.log(product);
     addToCart(product);  
   };
@@ -17,7 +17,7 @@ const Button = ({ product }) => {
         onClick={handleAddToCart}  
         className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition w-full"
       >
-        Add to Cart
+      {label}
       </button>
     </div>
   );

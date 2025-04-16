@@ -39,8 +39,9 @@ const Api = () => {
           <div
             key={product.id}
             className="bg-white rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 overflow-hidden"
+  
           >
-            <div className="overflow-hidden">
+            <div className="overflow-hidden ">
               <img
                 src={product.thumbnail}
                 alt={product.title}
@@ -52,7 +53,7 @@ const Api = () => {
               <p className="text-gray-700 font-medium mb-4">
                 Price: <span className="text-green-600 font-bold">${product.price}</span>
               </p>
-              <Button product={product} />
+              <Button product={product} label="Add to Cart" />
 
             </div>
           </div>

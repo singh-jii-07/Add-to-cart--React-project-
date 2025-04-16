@@ -1,9 +1,16 @@
 import React, { useContext } from "react";
 import { AddContext } from "../Components/Context/AddContext";
+import { toast } from 'react-toastify';
 
 const CartPages = () => {
-  const { add } = useContext(AddContext);
-
+  const { add, setAdd} = useContext(AddContext);
+  const handleRemove =((index)=>{
+    console.log(index);
+   let newArr=[...add];
+   newArr.splice(index,1);
+   setAdd(newArr);
+    toast.error("Item is Removed")
+  })
   return (
     <div className="p-6 bg-gradient-to-r from-blue-500 to-green-500 min-h-screen">
       <h2 className="text-3xl font-bold text-white text-center mb-6">
@@ -35,6 +42,9 @@ const CartPages = () => {
                   </span>
           
                 </p>
+          <button onClick={()=>handleRemove (index)} className="bg-red-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition w-full">
+            Remove Cart
+          </button>
               </div>
             </div>
           ))}

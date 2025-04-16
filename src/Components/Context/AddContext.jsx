@@ -1,12 +1,22 @@
 import React, { createContext, useState } from "react";
-
+import { toast } from 'react-toastify';
 export const AddContext = createContext();
 
 const AddcontextProvider = ({ children }) => {
   const [add, setAdd] = useState([]);  
 
   const addToCart = (product) => {
-    setAdd(() => [...add, product]); 
+    const isAdded = add.find((data) => data.id === product.id); 
+
+    if (!isAdded) {
+      setAdd(() => [...add, product]); 
+        toast.success("Item Added to Cart!");  
+    } 
+    else {
+      toast.error("Already Added in cart")
+    }
+
+  
   };
 
   const requiredVal = {

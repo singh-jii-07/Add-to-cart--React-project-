@@ -30,9 +30,18 @@ const Navbar = () => {
         MiniShop
       </div>
       {/* ${Show?"flex":"hidden"} */}
-      <ul className={`${Show?"flex":"hidden"}  space-x-4  `}>
+      <ul className={`${
+  Show ? "flex" : "hidden"
+} sm:flex space-x-2`}>
+
         {cardData.map((card) => (
-          <li key={card.id} className=" align-middle justify-center sm:hidden lg:block md:block">
+          <li key={card.id} className=" flex align-middle justify-center sm:hidden lg:block md:block">
+            <div className="flex">
+
+           
+            <div>
+
+            
             <Link
               to={card.link}
               className="text-black hover:text-blue-600 transition font-semibold align-middle justify-center space-x-1 flex "
@@ -45,11 +54,16 @@ const Navbar = () => {
               {card.name}
              </div>
             </Link>
+            </div>
+            <div>
+
             {card.name === "Cart" && add.length > 0 && (
               <span className="text-black font-medium">
                 ({add.length})
               </span>
             )}
+            </div>
+            </div>
           </li>
           
         ))}
