@@ -32,7 +32,7 @@ const Navbar = () => {
       {/* ${Show?"flex":"hidden"} */}
       <ul className={`${
   Show ? "flex" : "hidden"
-} sm:flex space-x-2`}>
+} sm:flex md:flex space-x-2`}>
 
         {cardData.map((card) => (
           <li key={card.id} className=" flex align-middle justify-center sm:hidden lg:block md:block">
