@@ -34,7 +34,7 @@ const CartPages = () => {
 
   const handleBuyNow = (item, index) => {
     toast.success(
-      `You bought ${item.title} for $${(item.price * (item.quantity || 1)).toFixed(2)}!`
+      "produce is buy "
     );
     const newArr = [...add];
     newArr.splice(index, 1);
