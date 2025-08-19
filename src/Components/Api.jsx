@@ -24,6 +24,7 @@ const Api = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
+        
         <div className="text-xl font-semibold text-blue-600 animate-pulse">
           Loading products...
         </div>
@@ -31,7 +32,7 @@ const Api = () => {
     );
   }
 
-  return (
+  return ( 
     <div className="p-6 bg-gradient-to-r from-blue-500 to-green-500 min-h-screen">
       <h2 className="text-3xl font-bold mb-6 text-center text-white">MiniShop Products</h2>
       <div className="grid gap-6 grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
